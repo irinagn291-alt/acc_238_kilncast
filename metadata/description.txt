@@ -1,0 +1,11 @@
+Kilncast is a kiln wall for people you keep meaning to write and then do not. Every brick is a person colored by predicted heat seven days from now, not by the last hello.
+
+• Kiln: hexagonal bricks ranked by forecast heat, with Falling, Holding, and an Ash rail
+• Empty kiln: The hive is cold. Add a person and restoke.
+• Add a person: Name, Cadence, days, then Add to the kiln
+• Restoke: Voice, Letter, Visit, or Note, plus What did you say? A tap without a log does not heat
+• Forecast (Imminent freeze): rank by heat at the forecast horizon
+• Settings: Default cadence, days; Forecast horizon, days; Optional reminder week; Contact Kilncast; Re-run onboarding; Reset all data
+• Onboarding: Who will go cold; Restoke the falling brick; Ash stays on the rail; Catch the freeze
+
+People and Touches stay on this device. There is no account.

@@ -1,0 +1,828 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		067563F80822C4E2FDCCB6EC /* HiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E8EFD6272F07A654BCF9E3 /* HiveView.swift */; };
+		0AF891EF64B83D0FF8B65D1C /* KilnEmptyPlate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CC257CC2F2FB42F316C5C0 /* KilnEmptyPlate.swift */; };
+		0EFC294F7418643DE935F1EC /* EmberStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92F3106B77510B52C10A134 /* EmberStoreTests.swift */; };
+		11E553793FE822A2D2AE5C69 /* HeatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B680C85C2823359458FA63 /* HeatCell.swift */; };
+		1772944077A8B134F35AF803 /* KilncastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9A0D96169EC6D84793C4FB /* KilncastTests.swift */; };
+		18F48BF11FC98D8F429BC8FD /* KilnWallRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771AEB15563B9BF1E490EECF /* KilnWallRepresentable.swift */; };
+		1AF83DC35287678ED17092B9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 728AD48FA76A37100F86035F /* Alamofire */; };
+		1BFA2CC2F3DEFA8CFF920E77 /* EmberGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4843A9AF117D0F57C681DD8 /* EmberGraph.swift */; };
+		24B79567B4B86E7DE460A863 /* FireclayPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB8976DE681C268DE7FE4E3 /* FireclayPalette.swift */; };
+		25BB43AE58D0F12BA8D2DCA9 /* FallingBandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225EE9920CAC46F1322728F4 /* FallingBandView.swift */; };
+		2645256703DFE5C30E35295C /* HeatFormula.swift in Sources */ = {isa = PBXBuildFile; fileRef = F069BEE0A554BD532B2ED4D2 /* HeatFormula.swift */; };
+		26C1B39EEB926CAC1C8D285B /* ForecastRankTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503B69DD2CD978E4F8AD4074 /* ForecastRankTests.swift */; };
+		2B83DA03E36A248D7B9DCDC4 /* ColdestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9E1AFB8B8E910C1DA61382 /* ColdestView.swift */; };
+		3C3EAA64E98611DF67364BEF /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701D73C073C64C24938B38E8 /* OnboardingView.swift */; };
+		44AFEA66B9FA16DEBB2C0F40 /* KilnSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29487E5C9CAAE19EABC91D64 /* KilnSeed.swift */; };
+		4A9BF72A92FC2AD5F72DB8BF /* Touch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A466C3EF126A559C0515BB /* Touch.swift */; };
+		51BDAA14B7F0EC840984F6E4 /* RestokeDraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB26061D290D5C75A1EACAD5 /* RestokeDraft.swift */; };
+		525FD01A2D8FB2A289C47D65 /* RestokeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC96D2633986873CDD23DC9 /* RestokeView.swift */; };
+		5D1DE3FE6A7C481013792E7D /* AshRailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F3CF3928E7AC71298521F5 /* AshRailView.swift */; };
+		5EE673A6A110F03B87491E58 /* FuturaScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588BB9211B3A2F7186E7D7BC /* FuturaScale.swift */; };
+		68D61BF2AAF09DEC428857A8 /* AddPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB1F29008CBB87BDE52F1CE /* AddPersonView.swift */; };
+		695EB33F8A5DCAE1234AE8FC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C481C165382486EA887DE2F7 /* SettingsView.swift */; };
+		699D78CB81EB357FD06C10B2 /* HotBandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E092C5187026B0CC75293C /* HotBandView.swift */; };
+		6F79E0BB3A27D1E70F74EE74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D24D20F07BEE8951B275675 /* Assets.xcassets */; };
+		7589EB5B2484652B55B83025 /* KilnClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63586BE154620CD43E5B844B /* KilnClientTests.swift */; };
+		774355F113624BE38230AA0C /* ForecastRank.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A7709DF8C8976682848071 /* ForecastRank.swift */; };
+		812A7210765B33DD15DFE83F /* KilnContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8B8AE7F2004F55D3C522B5 /* KilnContainer.swift */; };
+		83BEFBB38538568C2A11ED1D /* FreezeForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93FE977D64A1A7D7640E537 /* FreezeForecastView.swift */; };
+		8728F2D642FADF091D3C3BC9 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28246B53F2B2CD9AE1DF467 /* Person.swift */; };
+		887116BF5061F7E8C06B1A79 /* BrickCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED3C362114D36CA0E12B545 /* BrickCell.swift */; };
+		9A159BBBB91A3423322B06DE /* KilnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736D266A1C97A3776ACEBB94 /* KilnView.swift */; };
+		A1206E468D48F3C269CEFB55 /* EmberSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB08C82ED8E0EDED0846066D /* EmberSettings.swift */; };
+		A14C6A1000F892ECF0761BAC /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAF8BCB388CF8329D811237 /* APIConfig.swift */; };
+		A1F9A59CD9D0BFCBF4A25EDB /* HexKilnLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C47D2EF4D1CFEA17E12C96 /* HexKilnLayout.swift */; };
+		A6CEAA9E2F719CE44B03BBBB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BE510EEE9BFA72BC2F1559 /* ContentView.swift */; };
+		AF266CEA74D299D0EA44F9D1 /* EmberGraphTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5DEC8A0E11D7E98F731A2E /* EmberGraphTests.swift */; };
+		B313026DFD21E9D9EA4D15D3 /* KilncastApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8180C8E134C6E8C65D8DD6 /* KilncastApp.swift */; };
+		BBCA921F462E2F0DA7F5B676 /* RestokeComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AFFCAAC875467BF0631232 /* RestokeComposer.swift */; };
+		BDD253AD89FEB55DF8332FE9 /* HeatFormulaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B6EFB466217268742D8BCA /* HeatFormulaTests.swift */; };
+		C08878A00961CA392EAAE364 /* KilnClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF3D931307E2A99E422C91E /* KilnClient.swift */; };
+		C99824068A0DFDE0E15115AA /* EmberSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BABE838B7B0199830635457 /* EmberSessionTests.swift */; };
+		D1880E00424434DB33F0A50E /* ReviewHook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651AE1062D4CF6CB9C536EB8 /* ReviewHook.swift */; };
+		DE2A7F018947371E3249831A /* KilnSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD4B82E2E8D82EAE67BA024 /* KilnSchema.swift */; };
+		E07528085CA31EC32352428B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CE8E4207435B35B32B2BF4 /* AppDelegate.swift */; };
+		F081C44F78A59893D5F5CC3C /* ScreenCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D461BF96A63173DCA3AE0E /* ScreenCatalog.swift */; };
+		F2791F3131D0923802161CD8 /* ScreenShotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B180CF69E145F9C60322A18 /* ScreenShotTests.swift */; };
+		F590322B8C49733D469D1A51 /* ISOWeekDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50512E72D5A30460B582C609 /* ISOWeekDate.swift */; };
+		FB463A8C3290CB147D766E23 /* ReviewHookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A04898F7176F82D960316A /* ReviewHookTests.swift */; };
+		FE24059FE12696D106431389 /* EmberSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727045C20D1F54021925B4C2 /* EmberSession.swift */; };
+		FFACA37C0C431BD6B42B74CB /* EmberStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116A584CC209C3AC44087494 /* EmberStore.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1698036B98C278B0FC0145EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFA0712E3396E4B8E39D027F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 41E2C2DD4D7258330D4C82ED;
+			remoteInfo = Kilncast;
+		};
+		7AFEC94A698560E591194556 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFA0712E3396E4B8E39D027F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 41E2C2DD4D7258330D4C82ED;
+			remoteInfo = Kilncast;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		116A584CC209C3AC44087494 /* EmberStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmberStore.swift; sourceTree = "<group>"; };
+		14046542F1902BB8711CD4EE /* KilncastTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = KilncastTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		20BE510EEE9BFA72BC2F1559 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		225EE9920CAC46F1322728F4 /* FallingBandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallingBandView.swift; sourceTree = "<group>"; };
+		23B680C85C2823359458FA63 /* HeatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeatCell.swift; sourceTree = "<group>"; };
+		25AFFCAAC875467BF0631232 /* RestokeComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestokeComposer.swift; sourceTree = "<group>"; };
+		29487E5C9CAAE19EABC91D64 /* KilnSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KilnSeed.swift; sourceTree = "<group>"; };
+		36B6EFB466217268742D8BCA /* HeatFormulaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeatFormulaTests.swift; sourceTree = "<group>"; };
+		3E8180C8E134C6E8C65D8DD6 /* KilncastApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KilncastApp.swift; sourceTree = "<group>"; };
+		3ED3C362114D36CA0E12B545 /* BrickCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrickCell.swift; sourceTree = "<group>"; };
+		45CC257CC2F2FB42F316C5C0 /* KilnEmptyPlate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KilnEmptyPlate.swift; sourceTree = "<group>"; };
+		4BABE838B7B0199830635457 /* EmberSessionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmberSessionTests.swift; sourceTree = "<group>"; };
+		4D24D20F07BEE8951B275675 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		503B69DD2CD978E4F8AD4074 /* ForecastRankTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastRankTests.swift; sourceTree = "<group>"; };
+		50512E72D5A30460B582C609 /* ISOWeekDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISOWeekDate.swift; sourceTree = "<group>"; };
+		588BB9211B3A2F7186E7D7BC /* FuturaScale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuturaScale.swift; sourceTree = "<group>"; };
+		5AF3D931307E2A99E422C91E /* KilnClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KilnClient.swift; sourceTree = "<group>"; };
+		63586BE154620CD43E5B844B /* KilnClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KilnClientTests.swift; sourceTree = "<group>"; };
+		651AE1062D4CF6CB9C536EB8 /* ReviewHook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewHook.swift; sourceTree = "<group>"; };
+		66A04898F7176F82D960316A /* ReviewHookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewHookTests.swift; sourceTree = "<group>"; };
+		69E092C5187026B0CC75293C /* HotBandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotBandView.swift; sourceTree = "<group>"; };
+		6B180CF69E145F9C60322A18 /* ScreenShotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenShotTests.swift; sourceTree = "<group>"; };
+		701D73C073C64C24938B38E8 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		727045C20D1F54021925B4C2 /* EmberSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmberSession.swift; sourceTree = "<group>"; };
+		736D266A1C97A3776ACEBB94 /* KilnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KilnView.swift; sourceTree = "<group>"; };
+		771AEB15563B9BF1E490EECF /* KilnWallRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KilnWallRepresentable.swift; sourceTree = "<group>"; };
+		7BAF8BCB388CF8329D811237 /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
+		7E9E1AFB8B8E910C1DA61382 /* ColdestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColdestView.swift; sourceTree = "<group>"; };
+		87D461BF96A63173DCA3AE0E /* ScreenCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCatalog.swift; sourceTree = "<group>"; };
+		9BD4B82E2E8D82EAE67BA024 /* KilnSchema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KilnSchema.swift; sourceTree = "<group>"; };
+		A0A7709DF8C8976682848071 /* ForecastRank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastRank.swift; sourceTree = "<group>"; };
+		A3A466C3EF126A559C0515BB /* Touch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Touch.swift; sourceTree = "<group>"; };
+		A4843A9AF117D0F57C681DD8 /* EmberGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmberGraph.swift; sourceTree = "<group>"; };
+		B7DDF6E79E829F0780C600E1 /* Kilncast.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Kilncast.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1CE8E4207435B35B32B2BF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C481C165382486EA887DE2F7 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		CB08C82ED8E0EDED0846066D /* EmberSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmberSettings.swift; sourceTree = "<group>"; };
+		CB26061D290D5C75A1EACAD5 /* RestokeDraft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestokeDraft.swift; sourceTree = "<group>"; };
+		CDB8976DE681C268DE7FE4E3 /* FireclayPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireclayPalette.swift; sourceTree = "<group>"; };
+		D28246B53F2B2CD9AE1DF467 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		D93FE977D64A1A7D7640E537 /* FreezeForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreezeForecastView.swift; sourceTree = "<group>"; };
+		DA9A0D96169EC6D84793C4FB /* KilncastTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KilncastTests.swift; sourceTree = "<group>"; };
+		E6E8EFD6272F07A654BCF9E3 /* HiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiveView.swift; sourceTree = "<group>"; };
+		E7C47D2EF4D1CFEA17E12C96 /* HexKilnLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexKilnLayout.swift; sourceTree = "<group>"; };
+		E872F944E913065AA2E099BC /* KilncastShotTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = KilncastShotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E92F3106B77510B52C10A134 /* EmberStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmberStoreTests.swift; sourceTree = "<group>"; };
+		EC5DEC8A0E11D7E98F731A2E /* EmberGraphTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmberGraphTests.swift; sourceTree = "<group>"; };
+		EC8B8AE7F2004F55D3C522B5 /* KilnContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KilnContainer.swift; sourceTree = "<group>"; };
+		EDB1F29008CBB87BDE52F1CE /* AddPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPersonView.swift; sourceTree = "<group>"; };
+		F069BEE0A554BD532B2ED4D2 /* HeatFormula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeatFormula.swift; sourceTree = "<group>"; };
+		F5F3CF3928E7AC71298521F5 /* AshRailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AshRailView.swift; sourceTree = "<group>"; };
+		FDC96D2633986873CDD23DC9 /* RestokeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestokeView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		42189C99E7F667973401012C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AF83DC35287678ED17092B9 /* Alamofire in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1436D6BED6A23B62DF509ADB /* EmberGraph */ = {
+			isa = PBXGroup;
+			children = (
+				A4843A9AF117D0F57C681DD8 /* EmberGraph.swift */,
+				23B680C85C2823359458FA63 /* HeatCell.swift */,
+				F069BEE0A554BD532B2ED4D2 /* HeatFormula.swift */,
+			);
+			path = EmberGraph;
+			sourceTree = "<group>";
+		};
+		2ADCC5CD9F8599AC531B4705 /* KilncastShotTests */ = {
+			isa = PBXGroup;
+			children = (
+				87D461BF96A63173DCA3AE0E /* ScreenCatalog.swift */,
+				6B180CF69E145F9C60322A18 /* ScreenShotTests.swift */,
+			);
+			path = KilncastShotTests;
+			sourceTree = "<group>";
+		};
+		3B91487DFC8B65DA1DB29221 /* Fireclay */ = {
+			isa = PBXGroup;
+			children = (
+				CDB8976DE681C268DE7FE4E3 /* FireclayPalette.swift */,
+				588BB9211B3A2F7186E7D7BC /* FuturaScale.swift */,
+				45CC257CC2F2FB42F316C5C0 /* KilnEmptyPlate.swift */,
+			);
+			path = Fireclay;
+			sourceTree = "<group>";
+		};
+		4C478B721CF3BB38ED57690B /* KilncastTests */ = {
+			isa = PBXGroup;
+			children = (
+				EC5DEC8A0E11D7E98F731A2E /* EmberGraphTests.swift */,
+				4BABE838B7B0199830635457 /* EmberSessionTests.swift */,
+				E92F3106B77510B52C10A134 /* EmberStoreTests.swift */,
+				503B69DD2CD978E4F8AD4074 /* ForecastRankTests.swift */,
+				36B6EFB466217268742D8BCA /* HeatFormulaTests.swift */,
+				DA9A0D96169EC6D84793C4FB /* KilncastTests.swift */,
+				63586BE154620CD43E5B844B /* KilnClientTests.swift */,
+				66A04898F7176F82D960316A /* ReviewHookTests.swift */,
+			);
+			path = KilncastTests;
+			sourceTree = "<group>";
+		};
+		5237849C0580C5BEFAF74FA9 /* Ash */ = {
+			isa = PBXGroup;
+			children = (
+				F5F3CF3928E7AC71298521F5 /* AshRailView.swift */,
+			);
+			path = Ash;
+			sourceTree = "<group>";
+		};
+		6D49B15E68E34F585A71895C = {
+			isa = PBXGroup;
+			children = (
+				EBF1C46AC34CC7D2CE2339CC /* Kilncast */,
+				2ADCC5CD9F8599AC531B4705 /* KilncastShotTests */,
+				4C478B721CF3BB38ED57690B /* KilncastTests */,
+				9408CFA8B14E139085BCBF32 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9408CFA8B14E139085BCBF32 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B7DDF6E79E829F0780C600E1 /* Kilncast.app */,
+				E872F944E913065AA2E099BC /* KilncastShotTests.xctest */,
+				14046542F1902BB8711CD4EE /* KilncastTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A9F9CB7AA4A3BBC3C4597D54 /* Hot */ = {
+			isa = PBXGroup;
+			children = (
+				69E092C5187026B0CC75293C /* HotBandView.swift */,
+			);
+			path = Hot;
+			sourceTree = "<group>";
+		};
+		C59377C50DC6601A74F1C7D9 /* Falling */ = {
+			isa = PBXGroup;
+			children = (
+				225EE9920CAC46F1322728F4 /* FallingBandView.swift */,
+				A0A7709DF8C8976682848071 /* ForecastRank.swift */,
+			);
+			path = Falling;
+			sourceTree = "<group>";
+		};
+		DBD656E6EC74C02378756B51 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				CB08C82ED8E0EDED0846066D /* EmberSettings.swift */,
+				116A584CC209C3AC44087494 /* EmberStore.swift */,
+				50512E72D5A30460B582C609 /* ISOWeekDate.swift */,
+				5AF3D931307E2A99E422C91E /* KilnClient.swift */,
+				EC8B8AE7F2004F55D3C522B5 /* KilnContainer.swift */,
+				9BD4B82E2E8D82EAE67BA024 /* KilnSchema.swift */,
+				29487E5C9CAAE19EABC91D64 /* KilnSeed.swift */,
+				D28246B53F2B2CD9AE1DF467 /* Person.swift */,
+				CB26061D290D5C75A1EACAD5 /* RestokeDraft.swift */,
+				A3A466C3EF126A559C0515BB /* Touch.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		EBF1C46AC34CC7D2CE2339CC /* Kilncast */ = {
+			isa = PBXGroup;
+			children = (
+				7BAF8BCB388CF8329D811237 /* APIConfig.swift */,
+				C1CE8E4207435B35B32B2BF4 /* AppDelegate.swift */,
+				4D24D20F07BEE8951B275675 /* Assets.xcassets */,
+				20BE510EEE9BFA72BC2F1559 /* ContentView.swift */,
+				3E8180C8E134C6E8C65D8DD6 /* KilncastApp.swift */,
+				5237849C0580C5BEFAF74FA9 /* Ash */,
+				1436D6BED6A23B62DF509ADB /* EmberGraph */,
+				C59377C50DC6601A74F1C7D9 /* Falling */,
+				3B91487DFC8B65DA1DB29221 /* Fireclay */,
+				A9F9CB7AA4A3BBC3C4597D54 /* Hot */,
+				FD2836C064FAEB3C379C419F /* Kiln */,
+				DBD656E6EC74C02378756B51 /* Store */,
+			);
+			path = Kilncast;
+			sourceTree = "<group>";
+		};
+		FD2836C064FAEB3C379C419F /* Kiln */ = {
+			isa = PBXGroup;
+			children = (
+				EDB1F29008CBB87BDE52F1CE /* AddPersonView.swift */,
+				3ED3C362114D36CA0E12B545 /* BrickCell.swift */,
+				7E9E1AFB8B8E910C1DA61382 /* ColdestView.swift */,
+				727045C20D1F54021925B4C2 /* EmberSession.swift */,
+				D93FE977D64A1A7D7640E537 /* FreezeForecastView.swift */,
+				E7C47D2EF4D1CFEA17E12C96 /* HexKilnLayout.swift */,
+				E6E8EFD6272F07A654BCF9E3 /* HiveView.swift */,
+				736D266A1C97A3776ACEBB94 /* KilnView.swift */,
+				771AEB15563B9BF1E490EECF /* KilnWallRepresentable.swift */,
+				701D73C073C64C24938B38E8 /* OnboardingView.swift */,
+				25AFFCAAC875467BF0631232 /* RestokeComposer.swift */,
+				FDC96D2633986873CDD23DC9 /* RestokeView.swift */,
+				651AE1062D4CF6CB9C536EB8 /* ReviewHook.swift */,
+				C481C165382486EA887DE2F7 /* SettingsView.swift */,
+			);
+			path = Kiln;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		41E2C2DD4D7258330D4C82ED /* Kilncast */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5ADA6CDF79751AF8A47262A /* Build configuration list for PBXNativeTarget "Kilncast" */;
+			buildPhases = (
+				E423AAD64AEA9AD20ECEA907 /* Sources */,
+				5B5791DB865DFC008BCF7BDF /* Resources */,
+				42189C99E7F667973401012C /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Kilncast;
+			packageProductDependencies = (
+				728AD48FA76A37100F86035F /* Alamofire */,
+			);
+			productName = Kilncast;
+			productReference = B7DDF6E79E829F0780C600E1 /* Kilncast.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5508C497A0061842159B3F2B /* KilncastTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7898816E16DFA89E421BB312 /* Build configuration list for PBXNativeTarget "KilncastTests" */;
+			buildPhases = (
+				E8FCAD448D5F79C04D7DF45E /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E14DBA5F946CD9235F879024 /* PBXTargetDependency */,
+			);
+			name = KilncastTests;
+			packageProductDependencies = (
+			);
+			productName = KilncastTests;
+			productReference = 14046542F1902BB8711CD4EE /* KilncastTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B84DDFA47328778643BF032D /* KilncastShotTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B624322587CE7C7F29E7A72E /* Build configuration list for PBXNativeTarget "KilncastShotTests" */;
+			buildPhases = (
+				3393893594BADC263A11CCA5 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC9A0FB7AD24AFF376D84DEE /* PBXTargetDependency */,
+			);
+			name = KilncastShotTests;
+			packageProductDependencies = (
+			);
+			productName = KilncastShotTests;
+			productReference = E872F944E913065AA2E099BC /* KilncastShotTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CFA0712E3396E4B8E39D027F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					41E2C2DD4D7258330D4C82ED = {
+						ProvisioningStyle = Automatic;
+					};
+					5508C497A0061842159B3F2B = {
+						ProvisioningStyle = Automatic;
+					};
+					B84DDFA47328778643BF032D = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = BCDDE8E8E198FB33CF286D43 /* Build configuration list for PBXProject "Kilncast" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 6D49B15E68E34F585A71895C;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				E43AE3D8FD2B22CE807CFE01 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 9408CFA8B14E139085BCBF32 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				41E2C2DD4D7258330D4C82ED /* Kilncast */,
+				5508C497A0061842159B3F2B /* KilncastTests */,
+				B84DDFA47328778643BF032D /* KilncastShotTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5B5791DB865DFC008BCF7BDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F79E0BB3A27D1E70F74EE74 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3393893594BADC263A11CCA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F081C44F78A59893D5F5CC3C /* ScreenCatalog.swift in Sources */,
+				F2791F3131D0923802161CD8 /* ScreenShotTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E423AAD64AEA9AD20ECEA907 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A14C6A1000F892ECF0761BAC /* APIConfig.swift in Sources */,
+				68D61BF2AAF09DEC428857A8 /* AddPersonView.swift in Sources */,
+				E07528085CA31EC32352428B /* AppDelegate.swift in Sources */,
+				5D1DE3FE6A7C481013792E7D /* AshRailView.swift in Sources */,
+				887116BF5061F7E8C06B1A79 /* BrickCell.swift in Sources */,
+				2B83DA03E36A248D7B9DCDC4 /* ColdestView.swift in Sources */,
+				A6CEAA9E2F719CE44B03BBBB /* ContentView.swift in Sources */,
+				1BFA2CC2F3DEFA8CFF920E77 /* EmberGraph.swift in Sources */,
+				FE24059FE12696D106431389 /* EmberSession.swift in Sources */,
+				A1206E468D48F3C269CEFB55 /* EmberSettings.swift in Sources */,
+				FFACA37C0C431BD6B42B74CB /* EmberStore.swift in Sources */,
+				25BB43AE58D0F12BA8D2DCA9 /* FallingBandView.swift in Sources */,
+				24B79567B4B86E7DE460A863 /* FireclayPalette.swift in Sources */,
+				774355F113624BE38230AA0C /* ForecastRank.swift in Sources */,
+				83BEFBB38538568C2A11ED1D /* FreezeForecastView.swift in Sources */,
+				5EE673A6A110F03B87491E58 /* FuturaScale.swift in Sources */,
+				11E553793FE822A2D2AE5C69 /* HeatCell.swift in Sources */,
+				2645256703DFE5C30E35295C /* HeatFormula.swift in Sources */,
+				A1F9A59CD9D0BFCBF4A25EDB /* HexKilnLayout.swift in Sources */,
+				067563F80822C4E2FDCCB6EC /* HiveView.swift in Sources */,
+				699D78CB81EB357FD06C10B2 /* HotBandView.swift in Sources */,
+				F590322B8C49733D469D1A51 /* ISOWeekDate.swift in Sources */,
+				C08878A00961CA392EAAE364 /* KilnClient.swift in Sources */,
+				812A7210765B33DD15DFE83F /* KilnContainer.swift in Sources */,
+				0AF891EF64B83D0FF8B65D1C /* KilnEmptyPlate.swift in Sources */,
+				DE2A7F018947371E3249831A /* KilnSchema.swift in Sources */,
+				44AFEA66B9FA16DEBB2C0F40 /* KilnSeed.swift in Sources */,
+				9A159BBBB91A3423322B06DE /* KilnView.swift in Sources */,
+				18F48BF11FC98D8F429BC8FD /* KilnWallRepresentable.swift in Sources */,
+				B313026DFD21E9D9EA4D15D3 /* KilncastApp.swift in Sources */,
+				3C3EAA64E98611DF67364BEF /* OnboardingView.swift in Sources */,
+				8728F2D642FADF091D3C3BC9 /* Person.swift in Sources */,
+				BBCA921F462E2F0DA7F5B676 /* RestokeComposer.swift in Sources */,
+				51BDAA14B7F0EC840984F6E4 /* RestokeDraft.swift in Sources */,
+				525FD01A2D8FB2A289C47D65 /* RestokeView.swift in Sources */,
+				D1880E00424434DB33F0A50E /* ReviewHook.swift in Sources */,
+				695EB33F8A5DCAE1234AE8FC /* SettingsView.swift in Sources */,
+				4A9BF72A92FC2AD5F72DB8BF /* Touch.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8FCAD448D5F79C04D7DF45E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF266CEA74D299D0EA44F9D1 /* EmberGraphTests.swift in Sources */,
+				C99824068A0DFDE0E15115AA /* EmberSessionTests.swift in Sources */,
+				0EFC294F7418643DE935F1EC /* EmberStoreTests.swift in Sources */,
+				26C1B39EEB926CAC1C8D285B /* ForecastRankTests.swift in Sources */,
+				BDD253AD89FEB55DF8332FE9 /* HeatFormulaTests.swift in Sources */,
+				7589EB5B2484652B55B83025 /* KilnClientTests.swift in Sources */,
+				1772944077A8B134F35AF803 /* KilncastTests.swift in Sources */,
+				FB463A8C3290CB147D766E23 /* ReviewHookTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E14DBA5F946CD9235F879024 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 41E2C2DD4D7258330D4C82ED /* Kilncast */;
+			targetProxy = 7AFEC94A698560E591194556 /* PBXContainerItemProxy */;
+		};
+		FC9A0FB7AD24AFF376D84DEE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 41E2C2DD4D7258330D4C82ED /* Kilncast */;
+			targetProxy = 1698036B98C278B0FC0145EA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		215F2D87CAFD0C0580ED7C02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kilncast.wall.tests;
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kilncast.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Kilncast";
+			};
+			name = Release;
+		};
+		3776A6A8340065696607C147 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOLS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Kilncast;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app does not use the camera.";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_UIColorName = kln_background;
+				INFOPLIST_KEY_UILaunchScreen_UIImageName = kln_Splash;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kilncast.wall;
+				PRODUCT_NAME = Kilncast;
+				SDKROOT = iphoneos;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		41E5796F8DBE6B6647DD3FBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kilncast.wall.tests.shots;
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kilncast.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Kilncast";
+			};
+			name = Debug;
+		};
+		5274306E6E335406362A83F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.2;
+			};
+			name = Debug;
+		};
+		71601AC3418085D877224653 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kilncast.wall.tests.shots;
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kilncast.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Kilncast";
+			};
+			name = Release;
+		};
+		BC1EC86F36B20C9F81372ED0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.2;
+			};
+			name = Release;
+		};
+		C7755318DC88F5EC811C93EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kilncast.wall.tests;
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kilncast.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Kilncast";
+			};
+			name = Debug;
+		};
+		F83A00CF2D6A5A32DD7391A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOLS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Kilncast;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app does not use the camera.";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_UIColorName = kln_background;
+				INFOPLIST_KEY_UILaunchScreen_UIImageName = kln_Splash;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kilncast.wall;
+				PRODUCT_NAME = Kilncast;
+				SDKROOT = iphoneos;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7898816E16DFA89E421BB312 /* Build configuration list for PBXNativeTarget "KilncastTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7755318DC88F5EC811C93EE /* Debug */,
+				215F2D87CAFD0C0580ED7C02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B624322587CE7C7F29E7A72E /* Build configuration list for PBXNativeTarget "KilncastShotTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41E5796F8DBE6B6647DD3FBF /* Debug */,
+				71601AC3418085D877224653 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		BCDDE8E8E198FB33CF286D43 /* Build configuration list for PBXProject "Kilncast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5274306E6E335406362A83F2 /* Debug */,
+				BC1EC86F36B20C9F81372ED0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F5ADA6CDF79751AF8A47262A /* Build configuration list for PBXNativeTarget "Kilncast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3776A6A8340065696607C147 /* Debug */,
+				F83A00CF2D6A5A32DD7391A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E43AE3D8FD2B22CE807CFE01 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/wrandecima-bit/Alamofire";
+			requirement = {
+				kind = revision;
+				revision = 7fdd403089757be2ce6991b287c7bef612c8bd04;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		728AD48FA76A37100F86035F /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E43AE3D8FD2B22CE807CFE01 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = CFA0712E3396E4B8E39D027F /* Project object */;
+}

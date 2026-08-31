@@ -1,0 +1,1 @@
+Version 1.0 is the first release. It includes the Kiln wall ranked by predicted heat, Add a person, Restoke with Voice, Letter, Visit, and Note, the Ash rail for never-touched bricks, Falling and Holding bands, Imminent freeze Forecast, Settings for default cadence, forecast horizon, and optional reminder week, Contact Kilncast, Reset all data, and the four-plate onboarding.

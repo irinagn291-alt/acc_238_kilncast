@@ -1,0 +1,13 @@
+The only privacy usage string in the build settings is NSCameraUsageDescription: "This app does not use the camera." The app never requests camera access or shows a camera interface, so that system prompt should not appear. No other usage-description keys are present.
+
+There is no login, no in-app purchase, no account deletion flow, and no App Tracking Transparency prompt. Restoke Touch notes are typed by the user and stored only on this device; they are not published or shared with other people.
+
+Kilncast is a personal kiln wall for people who keep meaning to write and then do not. Each person is a brick ranked by predicted heat at the forecast horizon, not by the last hello. Restoke writes a Touch, and never-touched bricks stay at zero on the Ash rail.
+
+No credentials or demo account are needed. On a cold launch the app sends a short registration request and then either opens a web view or the native Kiln (after at most five seconds). If onboarding is visible, use Next, Skip, or Open the kiln on the plates Who will go cold, Restoke the falling brick, Ash stays on the rail, and Catch the freeze. From the Kiln, tap Add a person to enter a Name and Cadence, days, then Add to the kiln. Tap a brick to Restoke: choose Voice, Letter, Visit, or Note, enter What did you say?, and tap Restoke. Tap Imminent freeze to open Forecast. Tap the gear for Settings, including Default cadence, days, Forecast horizon, days, Optional reminder week, Contact Kilncast, Re-run onboarding, and Reset all data.
+
+Launch registration is a POST to https://kilncast.pro/api/v1/users/register. If that response includes a content URL, it is shown in a web view and may be stored for later launches. Contact Kilncast opens https://kilncast.pro/contact-us. Person and Touch records, plus cadence, forecast horizon, reminder week, and the onboarding flag, stay on the device. Heat is computed on the device and is not stored. There is no remote catalog.
+
+The Kiln features do not change by country. Number formatting and day boundaries follow the device locale. The optional reminder week uses an ISO week key. The registration response may return the native Kiln or a web URL.
+
+No licence or regulated-industry paperwork applies. The native app is a personal on-device contact kiln, not a medical, financial, or licensed service, and it does not require professional credentials.

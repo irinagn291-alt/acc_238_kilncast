@@ -1,0 +1,1 @@
+Each brick is a person colored by heat seven days from now. Restoke a falling brick by writing a Touch. Never-touched stay on the Ash rail.
