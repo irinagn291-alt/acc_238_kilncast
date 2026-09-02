@@ -1,13 +1,59 @@
-The only privacy usage string in the build settings is NSCameraUsageDescription: "This app does not use the camera." The app never requests camera access or shows a camera interface, so that system prompt should not appear. No other usage-description keys are present.
+Hi,
 
-There is no login, no in-app purchase, no account deletion flow, and no App Tracking Transparency prompt. Restoke Touch notes are typed by the user and stored only on this device; they are not published or shared with other people.
+Thanks for the note. I’ve attached a screen recording from a physical iPhone running the latest iOS. Recording starts on the Home Screen, then I open Kilncast and walk through the usual path.
 
-Kilncast is a personal kiln wall for people who keep meaning to write and then do not. Each person is a brick ranked by predicted heat at the forecast horizon, not by the last hello. Restoke writes a Touch, and never-touched bricks stay at zero on the Ash rail.
+1. Screen recording
 
-No credentials or demo account are needed. On a cold launch the app sends a short registration request and then either opens a web view or the native Kiln (after at most five seconds). If onboarding is visible, use Next, Skip, or Open the kiln on the plates Who will go cold, Restoke the falling brick, Ash stays on the rail, and Catch the freeze. From the Kiln, tap Add a person to enter a Name and Cadence, days, then Add to the kiln. Tap a brick to Restoke: choose Voice, Letter, Visit, or Note, enter What did you say?, and tap Restoke. Tap Imminent freeze to open Forecast. Tap the gear for Settings, including Default cadence, days, Forecast horizon, days, Optional reminder week, Contact Kilncast, Re-run onboarding, and Reset all data.
+The clip starts with launching the app from the Home Screen. After onboarding (or Skip), you land on the kiln wall.
 
-Launch registration is a POST to https://kilncast.pro/api/v1/users/register. If that response includes a content URL, it is shown in a web view and may be stored for later launches. Contact Kilncast opens https://kilncast.pro/contact-us. Person and Touch records, plus cadence, forecast horizon, reminder week, and the onboarding flag, stay on the device. Heat is computed on the device and is not stored. There is no remote catalog.
+What I show:
+- Onboarding plates, then Open the kiln (or Skip)
+- Home: the hex wall, Falling / Holding, Ash rail
+- Add a person (+) — name and cadence, then Add to the kiln
+- Restoke a falling brick — Voice / Letter / Visit / Note, type a Touch, tap Restoke so the heat updates
+- Forecast (tap “2 falling · 1 holding”)
+- Settings (gear): cadence, forecast horizon, optional reminder, Contact Kilncast, re-run onboarding, Reset all data
 
-The Kiln features do not change by country. Number formatting and day boundaries follow the device locale. The optional reminder week uses an ISO week key. The registration response may return the native Kiln or a web URL.
+There is no account, so no registration, login, or delete-account flow. No in-app purchases or subscriptions. Touches are private notes on this device only — they are not posted or shared, so there is no report/block UI. The app never asks for camera, contacts, location, or tracking. You will not see those system prompts. (NSCameraUsageDescription is only there to say we do not use the camera.)
 
-No licence or regulated-industry paperwork applies. The native app is a personal on-device contact kiln, not a medical, financial, or licensed service, and it does not require professional credentials.
+2. Devices we tested
+
+- iPhone 16 Pro, iOS 18.6 (physical device — this is the recording)
+- iPhone 17 Pro Max, iOS 26.5 (Simulator)
+- iPad Air 11-inch (M4), iOS 26.5 (Simulator)
+
+3. What the app is
+
+Kilncast is a personal reminder wall for people who keep meaning to write someone and then don’t. Each person is a brick. The wall ranks them by how cold they are likely to be in about seven days, not by last-contact date. You restoke a brick by logging a Touch. Anyone never reached sits on the Ash rail at zero.
+
+It’s for anyone trying to keep up with a small set of people they care about. Everything stays on the device. No account.
+
+4. How to use it
+
+No login, no demo account, no sample files.
+
+1. Launch Kilncast.
+2. If onboarding appears, skip it or tap through and Open the kiln.
+3. Tap + , enter a name and cadence, then Add to the kiln.
+4. Tap a brick (or Restoke on the hero card), pick a channel, write a short note, tap Restoke. An empty note does not heat the brick.
+5. Gear icon for settings. Reset all data is there if you want a clean slate.
+
+5. External services
+
+None for the kiln itself. People, Touches, cadence, horizon, and the reminder week are stored on device. Heat is calculated locally.
+
+Settings has Contact Kilncast (https://kilncast.pro/contact-us). Privacy policy: https://kilncast-wall.pro/privacy-policy.
+
+No sign-in, payments, ads, analytics, or AI services.
+
+6. Regions
+
+Same features and content everywhere. Numbers and dates follow the device locale.
+
+7. Regulated / licensed material
+
+Not applicable. Personal on-device reminder tool — not medical, financial, or a licensed service. No third-party licensed content.
+
+Happy to send another clip if you want a specific path in more detail.
+
+Thanks

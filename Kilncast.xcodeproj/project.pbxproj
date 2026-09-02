@@ -20,6 +20,7 @@
 		2645256703DFE5C30E35295C /* HeatFormula.swift in Sources */ = {isa = PBXBuildFile; fileRef = F069BEE0A554BD532B2ED4D2 /* HeatFormula.swift */; };
 		26C1B39EEB926CAC1C8D285B /* ForecastRankTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503B69DD2CD978E4F8AD4074 /* ForecastRankTests.swift */; };
 		2B83DA03E36A248D7B9DCDC4 /* ColdestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9E1AFB8B8E910C1DA61382 /* ColdestView.swift */; };
+		38EDC740743857BC6D5A1F8F /* FallingHeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346E85F2B010D9EFF8A38179 /* FallingHeroView.swift */; };
 		3C3EAA64E98611DF67364BEF /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701D73C073C64C24938B38E8 /* OnboardingView.swift */; };
 		44AFEA66B9FA16DEBB2C0F40 /* KilnSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29487E5C9CAAE19EABC91D64 /* KilnSeed.swift */; };
 		4A9BF72A92FC2AD5F72DB8BF /* Touch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A466C3EF126A559C0515BB /* Touch.swift */; };
@@ -84,6 +85,7 @@
 		23B680C85C2823359458FA63 /* HeatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeatCell.swift; sourceTree = "<group>"; };
 		25AFFCAAC875467BF0631232 /* RestokeComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestokeComposer.swift; sourceTree = "<group>"; };
 		29487E5C9CAAE19EABC91D64 /* KilnSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KilnSeed.swift; sourceTree = "<group>"; };
+		346E85F2B010D9EFF8A38179 /* FallingHeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallingHeroView.swift; sourceTree = "<group>"; };
 		36B6EFB466217268742D8BCA /* HeatFormulaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeatFormulaTests.swift; sourceTree = "<group>"; };
 		3E8180C8E134C6E8C65D8DD6 /* KilncastApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KilncastApp.swift; sourceTree = "<group>"; };
 		3ED3C362114D36CA0E12B545 /* BrickCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrickCell.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				225EE9920CAC46F1322728F4 /* FallingBandView.swift */,
+				346E85F2B010D9EFF8A38179 /* FallingHeroView.swift */,
 				A0A7709DF8C8976682848071 /* ForecastRank.swift */,
 			);
 			path = Falling;
@@ -429,6 +432,7 @@
 				A1206E468D48F3C269CEFB55 /* EmberSettings.swift in Sources */,
 				FFACA37C0C431BD6B42B74CB /* EmberStore.swift in Sources */,
 				25BB43AE58D0F12BA8D2DCA9 /* FallingBandView.swift in Sources */,
+				38EDC740743857BC6D5A1F8F /* FallingHeroView.swift in Sources */,
 				24B79567B4B86E7DE460A863 /* FireclayPalette.swift in Sources */,
 				774355F113624BE38230AA0C /* ForecastRank.swift in Sources */,
 				83BEFBB38538568C2A11ED1D /* FreezeForecastView.swift in Sources */,
@@ -517,7 +521,7 @@
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOLS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Kilncast;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
@@ -736,7 +740,7 @@
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOLS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Kilncast;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
