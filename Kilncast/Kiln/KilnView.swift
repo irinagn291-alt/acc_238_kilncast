@@ -133,26 +133,14 @@ struct KilnStage: View {
 
     private var header: some View {
         VStack(alignment: .leading, spacing: FireclayPalette.space(1)) {
-            EmberArt(name: EmberArtName.header)
-                .frame(maxHeight: FireclayPalette.space(8))
-                .clipped()
-            HStack(alignment: .firstTextBaseline) {
-                Text(title)
-                    .kilnText(.display)
-                    .foregroundStyle(FireclayPalette.ink)
-                    .lineLimit(1)
-                Spacer(minLength: FireclayPalette.space(1))
-                Text(EmberFigures.heat(session.graph.falling.first?.forecastT ?? 0))
-                    .kilnText(.title)
-                    .monospacedDigit()
-                    .foregroundStyle(FireclayPalette.accent)
-                    .lineLimit(1)
-                    .accessibilityLabel("Coldest forecast \(EmberFigures.heat(session.graph.falling.first?.forecastT ?? 0))")
-            }
+            Text(title)
+                .kilnText(.display)
+                .foregroundStyle(FireclayPalette.ink)
+                .lineLimit(1)
             Button {
                 session.openForecast()
             } label: {
-                Text("Imminent freeze · \(EmberFigures.count(session.settings.forecastHorizonDays)) days")
+                Text(bandSummary)
                     .kilnText(.caption)
                     .foregroundStyle(FireclayPalette.muted)
                     .lineLimit(1)
@@ -161,11 +149,15 @@ struct KilnStage: View {
                     .contentShape(Rectangle())
             }
             .buttonStyle(.plain)
-            .accessibilityLabel("Imminent freeze forecast")
+            .accessibilityLabel("Imminent freeze forecast, \(bandSummary)")
         }
         .padding(.horizontal, FireclayPalette.space(2))
         .padding(.top, FireclayPalette.space(1))
         .padding(.bottom, FireclayPalette.space(2))
+    }
+
+    private var bandSummary: String {
+        "\(EmberFigures.count(session.graph.falling.count)) falling · \(EmberFigures.count(session.graph.hot.count)) holding"
     }
 
     @ViewBuilder
@@ -173,13 +165,33 @@ struct KilnStage: View {
         let ranked = session.graph.kilnWall
         ScrollView {
             VStack(alignment: .leading, spacing: FireclayPalette.space(2)) {
-                if emphasizesFalling || !session.graph.falling.isEmpty {
-                    FallingBandView(bricks: session.graph.falling)
+                if let hero = session.graph.falling.first {
+                    FallingHeroView(
+                        brick: hero,
+                        horizonDays: session.settings.forecastHorizonDays,
+                        onRestoke: { channel in
+                            session.openRestoke(personID: hero.person.id, channel: channel)
+                        }
+                    )
+                    .padding(.horizontal, FireclayPalette.space(2))
+                } else if emphasizesFalling, !session.graph.bricks.isEmpty {
+                    VStack(alignment: .leading, spacing: FireclayPalette.space(1)) {
+                        Text("Nothing is falling.")
+                            .kilnText(.headline)
+                            .foregroundStyle(FireclayPalette.ink)
+                        Text("Catch the brick before it hits the floor.")
+                            .kilnText(.body)
+                            .foregroundStyle(FireclayPalette.muted)
+                    }
+                    .padding(.horizontal, FireclayPalette.space(2))
                 }
-                if !session.graph.hot.isEmpty {
-                    HotBandView(bricks: session.graph.hot)
+                if !ranked.isEmpty {
+                    Text("Tap a brick to restoke")
+                        .kilnText(.caption)
+                        .foregroundStyle(FireclayPalette.muted)
+                        .padding(.horizontal, FireclayPalette.space(2))
+                    KilnWallHost(bricks: ranked, onSelect: session.openRestoke)
                 }
-                KilnWallHost(bricks: ranked, onSelect: session.openRestoke)
                 AshRailView(bricks: session.graph.ash, onSelect: session.openRestoke)
             }
             .padding(.bottom, FireclayPalette.space(2))

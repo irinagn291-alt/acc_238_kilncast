@@ -65,4 +65,13 @@ enum RestokeChannel: String, Sendable, Codable, CaseIterable, Equatable {
     case letter
     case visit
     case note
+
+    var title: String {
+        switch self {
+        case .voice: return "Voice"
+        case .letter: return "Letter"
+        case .visit: return "Visit"
+        case .note: return "Note"
+        }
+    }
 }

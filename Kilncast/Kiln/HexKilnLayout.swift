@@ -2,7 +2,7 @@ import UIKit
 
 /// Role: Presentation. Hexagonal UICollectionViewLayout. Each brick is a cell, not a row.
 final class HexKilnLayout: UICollectionViewLayout {
-    var hexHeight: CGFloat = 112
+    var hexHeight: CGFloat = 128
     var gap: CGFloat = 8
 
     private var attributes: [UICollectionViewLayoutAttributes] = []
@@ -42,7 +42,7 @@ final class HexKilnLayout: UICollectionViewLayout {
         collectionView?.bounds.size != newBounds.size
     }
 
-    static func measure(count: Int, width: CGFloat, hexHeight: CGFloat = 112, gap: CGFloat = 8) -> CGFloat {
+    static func measure(count: Int, width: CGFloat, hexHeight: CGFloat = 128, gap: CGFloat = 8) -> CGFloat {
         let frames = frames(count: count, width: width, hexHeight: hexHeight, gap: gap)
         return (frames.map(\.maxY).max() ?? 0) + (count == 0 ? 0 : gap)
     }

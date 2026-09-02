@@ -15,15 +15,10 @@ struct AshRailView: View {
 
     var body: some View {
         if bricks.isEmpty {
-            KilnEmptyPlate(
-                image: EmberArtName.emptyList,
-                headline: "Ash rail is cold.",
-                line: "Never-touched bricks sit here at zero.",
-                fillsPage: true
-            )
+            EmptyView()
         } else {
             VStack(alignment: .leading, spacing: FireclayPalette.space(1)) {
-                Text("Ash rail")
+                Text("Ash rail · never touched")
                     .kilnText(.caption)
                     .foregroundStyle(FireclayPalette.muted)
                 ScrollView(.horizontal, showsIndicators: false) {
@@ -33,7 +28,7 @@ struct AshRailView: View {
                                 onSelect(brick.person.id)
                             } label: {
                                 BrickFace(brick: brick)
-                                    .frame(width: 88, height: 96)
+                                    .frame(width: 96, height: 104)
                             }
                             .buttonStyle(.plain)
                             .kilnTap()

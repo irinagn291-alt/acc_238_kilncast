@@ -14,22 +14,15 @@ struct RestokeView: View {
                 .navigationTitle("Restoke")
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
-                    ToolbarItem(placement: .cancellationAction) {
-                        Button {
+                    ToolbarItem(placement: .topBarLeading) {
+                        Button("Close") {
                             session.sheet = nil
-                        } label: {
-                            Text("Close")
-                                .kilnText(.headline)
-                                .foregroundStyle(FireclayPalette.ink)
-                                .padding(.horizontal, FireclayPalette.space(1))
-                                .kilnTap()
                         }
-                        .buttonStyle(.plain)
-                        .accessibilityLabel("Close")
+                        .tint(FireclayPalette.ink)
                     }
                 }
         }
-        .presentationDetents([.large])
+        .presentationDetents([.medium, .large])
         .presentationDragIndicator(.visible)
     }
 }

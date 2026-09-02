@@ -25,16 +25,22 @@ struct HexagonShape: Shape {
 /// Role: Presentation. Forecast T fill plus a non-colour cue. Heat is derived.
 struct BrickFace: View {
     var brick: BrickHeat
+    var pressed: Bool = false
     @Environment(\.sizeCategory) private var sizeCategory
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
-    init(brick: BrickHeat = BrickHeat(
-        person: KilnPerson(id: KilnSeed.marloweID, displayName: "Marlowe", cadenceDays: 7),
-        lastTouchAt: EmberSession.previewNow,
-        currentT: 80,
-        forecastT: 22,
-        band: .falling
-    )) {
+    init(
+        brick: BrickHeat = BrickHeat(
+            person: KilnPerson(id: KilnSeed.marloweID, displayName: "Marlowe", cadenceDays: 7),
+            lastTouchAt: EmberSession.previewNow,
+            currentT: 80,
+            forecastT: 22,
+            band: .falling
+        ),
+        pressed: Bool = false
+    ) {
         self.brick = brick
+        self.pressed = pressed
     }
 
     var body: some View {
@@ -42,7 +48,7 @@ struct BrickFace: View {
         ZStack {
             FireclayPalette.brickFill(forecastT: brick.forecastT)
             HexagonShape()
-                .stroke(FireclayPalette.ink.opacity(0.18), lineWidth: 1)
+                .stroke(strokeColor, lineWidth: 1.5)
             VStack(spacing: 0) {
                 BandMark(band: brick.band)
                     .frame(width: 16, height: 12)
@@ -62,8 +68,13 @@ struct BrickFace: View {
             }
             .padding(.horizontal, FireclayPalette.space(1))
             .foregroundStyle(FireclayPalette.ink)
+            if pressed {
+                HexagonShape()
+                    .fill(FireclayPalette.ink.opacity(0.14))
+            }
         }
         .clipShape(HexagonShape())
+        .scaleEffect(!reduceMotion && pressed ? 0.96 : 1)
         .accessibilityElement(children: .ignore)
         .accessibilityLabel(Self.spoken(brick))
         .accessibilityAddTraits(.isButton)
@@ -71,9 +82,17 @@ struct BrickFace: View {
 
     private var bandWord: String {
         switch brick.band {
-        case .ash: return "Ash"
+        case .ash: return "First touch"
         case .falling: return "Falling"
         case .hot: return "Holding"
+        }
+    }
+
+    private var strokeColor: Color {
+        switch brick.band {
+        case .ash: return FireclayPalette.muted
+        case .falling: return FireclayPalette.accent.opacity(0.85)
+        case .hot: return FireclayPalette.ink.opacity(0.35)
         }
     }
 
@@ -128,9 +147,9 @@ struct BandMark: View {
 final class BrickCell: UICollectionViewCell {
     static let reuseID = "BrickCell"
 
-    func apply(_ brick: BrickHeat) {
+    func apply(_ brick: BrickHeat, pressed: Bool = false) {
         contentConfiguration = UIHostingConfiguration {
-            BrickFace(brick: brick)
+            BrickFace(brick: brick, pressed: pressed)
         }
         .margins(.all, 0)
         .minSize(width: FireclayPalette.tap, height: FireclayPalette.tap)

@@ -77,6 +77,21 @@ final class EmberStoreTests: XCTestCase {
         }
     }
 
+    func test_updateCadenceRecomputesWithoutANewTouch() async throws {
+        let store = EmberStore(modelContainer: try openInMemory())
+        let person = try await store.addPerson(displayName: "Tess", cadenceDays: 30)
+        let now = Date(timeIntervalSince1970: 1_787_983_200)
+        _ = try await store.restoke(
+            RestokeDraft(personID: person.id, channel: .letter, body: "Held."),
+            at: now
+        )
+        try await store.updateCadence(personID: person.id, cadenceDays: 5)
+        let loaded = try await store.load()
+        XCTAssertEqual(loaded.people[0].cadenceDays, 5)
+        XCTAssertEqual(loaded.touches.count, 1)
+        XCTAssertEqual(loaded.touches[0].body, "Held.")
+    }
+
     func test_resetAllDataAndCascadeDelete() async throws {
         let store = EmberStore(modelContainer: try openInMemory())
         let person = try await store.addPerson(displayName: "Marlowe", cadenceDays: 7)

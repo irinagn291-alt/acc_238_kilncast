@@ -154,6 +154,54 @@ final class EmberSessionTests: XCTestCase {
         )
     }
 
+    func test_openRestokeSelectsChannel() {
+        let session = EmberSession.previewPopulated()
+        session.openRestoke(personID: KilnSeed.marloweID, channel: .letter)
+        XCTAssertEqual(session.sheet, .restoke)
+        XCTAssertEqual(session.draft.channel, .letter)
+        XCTAssertEqual(session.restokePersonID, KilnSeed.marloweID)
+        XCTAssertEqual(session.restokeCadenceDays, 7)
+        XCTAssertEqual(session.graph.falling.first?.person.id, KilnSeed.marloweID)
+    }
+
+    func test_restokeTouchesAreNewestFirst() {
+        let session = EmberSession.previewPopulated()
+        session.openRestoke(personID: KilnSeed.marloweID)
+        XCTAssertEqual(session.restokeTouches().map(\.id), [KilnSeed.marloweTouchID])
+        XCTAssertEqual(session.restokeTouches().first?.body, "Restoke before the brick falls.")
+    }
+
+    func test_deletePersonRemovesBrick() async {
+        let session = EmberSession.previewPopulated()
+        session.openRestoke(personID: KilnSeed.marloweID)
+        await session.deleteRestokePerson()
+        XCTAssertFalse(session.graph.bricks.contains { $0.person.id == KilnSeed.marloweID })
+        XCTAssertNil(session.sheet)
+        XCTAssertNil(session.restokePersonID)
+        XCTAssertEqual(session.graph.falling.first?.person.id, KilnSeed.tessID)
+    }
+
+    func test_cadenceEditRecomputesWithoutANewTouch() async throws {
+        let session = EmberSession.previewPopulated()
+        let before = try XCTUnwrap(session.graph.bricks.first { $0.person.id == KilnSeed.tessID })
+        session.openRestoke(personID: KilnSeed.tessID)
+        session.restokeCadenceDays = 5
+        await session.updateRestokeCadence()
+        let after = try XCTUnwrap(session.graph.bricks.first { $0.person.id == KilnSeed.tessID })
+        XCTAssertEqual(after.lastTouchAt, before.lastTouchAt)
+        XCTAssertEqual(after.person.cadenceDays, 5)
+        XCTAssertNotEqual(after.forecastT, before.forecastT)
+    }
+
+    func test_deletePersonThroughStore() async throws {
+        let session = try makeStoredSession()
+        let person = try await add(name: "Marlowe", cadence: 7, on: session)
+        session.openRestoke(personID: person.id)
+        await session.deleteRestokePerson()
+        XCTAssertTrue(session.graph.bricks.isEmpty)
+        XCTAssertNil(session.sheet)
+    }
+
     private func makeStoredSession() throws -> EmberSession {
         switch KilnContainer.inMemory() {
         case .success(let container):

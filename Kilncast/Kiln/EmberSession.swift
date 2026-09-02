@@ -24,6 +24,7 @@ final class EmberSession {
     var commitFlash = false
     var onboarded: Bool
     var restokePersonID: UUID?
+    var restokeCadenceDays: Double
     var draft = RestokeDraft(personID: UUID(), channel: .note, body: "")
     var addName = ""
     var addCadenceDays: Double
@@ -58,6 +59,7 @@ final class EmberSession {
         self.settings = loaded
         onboarded = loaded.onboardingComplete
         addCadenceDays = loaded.defaultCadenceDays
+        restokeCadenceDays = loaded.defaultCadenceDays
         graph = EmberGraph(now: now, horizonDays: loaded.forecastHorizonDays, bricks: [])
         if store == nil, shouldLoad {
             fault = "The kiln could not be opened."
@@ -202,9 +204,70 @@ final class EmberSession {
     }
 
     func openRestoke(personID: UUID) {
+        openRestoke(personID: personID, channel: .note)
+    }
+
+    func openRestoke(personID: UUID, channel: RestokeChannel) {
         restokePersonID = personID
-        draft = RestokeDraft(personID: personID, channel: .note, body: "")
+        restokeCadenceDays = graph.bricks.first { $0.person.id == personID }?.person.cadenceDays
+            ?? settings.defaultCadenceDays
+        draft = RestokeDraft(personID: personID, channel: channel, body: "")
         sheet = .restoke
+    }
+
+    func restokeTouches() -> [EmberTouch] {
+        guard let restokePersonID else { return [] }
+        return touches
+            .filter { $0.personID == restokePersonID }
+            .sorted { lhs, rhs in
+                if lhs.touchedAt != rhs.touchedAt {
+                    return lhs.touchedAt > rhs.touchedAt
+                }
+                return lhs.id.uuidString < rhs.id.uuidString
+            }
+    }
+
+    func updateRestokeCadence() async {
+        guard let restokePersonID else { return }
+        guard restokeCadenceDays > 0 else {
+            fault = spoken(EmberStoreError.invalidCadence)
+            return
+        }
+        do {
+            if let store {
+                try await store.updateCadence(personID: restokePersonID, cadenceDays: restokeCadenceDays)
+                try await reloadFromStore()
+            } else if let index = people.firstIndex(where: { $0.id == restokePersonID }) {
+                people[index].cadenceDays = restokeCadenceDays
+                rebuildGraph()
+            }
+            fault = nil
+        } catch {
+            fault = spoken(error)
+        }
+    }
+
+    func deleteRestokePerson() async {
+        guard let restokePersonID else { return }
+        guard !commitBusy else { return }
+        commitBusy = true
+        defer { commitBusy = false }
+        do {
+            if let store {
+                try await store.deletePerson(id: restokePersonID)
+                try await reloadFromStore()
+            } else {
+                people.removeAll { $0.id == restokePersonID }
+                touches.removeAll { $0.personID == restokePersonID }
+                rebuildGraph()
+            }
+            self.restokePersonID = nil
+            sheet = nil
+            fault = nil
+            UINotificationFeedbackGenerator().notificationOccurred(.success)
+        } catch {
+            fault = spoken(error)
+        }
     }
 
     func openSettings() {

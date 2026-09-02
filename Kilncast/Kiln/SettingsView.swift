@@ -87,19 +87,12 @@ struct SettingsView: View {
             .navigationTitle("Settings")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .cancellationAction) {
-                    Button {
-                        session.sheet = nil
-                    } label: {
-                        Text("Close")
-                            .kilnText(.headline)
-                            .foregroundStyle(FireclayPalette.ink)
-                            .padding(.horizontal, FireclayPalette.space(1))
-                            .kilnTap()
+                    ToolbarItem(placement: .topBarLeading) {
+                        Button("Close") {
+                            session.sheet = nil
+                        }
+                        .tint(FireclayPalette.ink)
                     }
-                    .buttonStyle(.plain)
-                    .accessibilityLabel("Close")
-                }
             }
             .confirmationDialog("Clear every brick and touch?", isPresented: $confirmReset, titleVisibility: .visible) {
                 Button("Reset all data", role: .destructive) {

@@ -64,6 +64,19 @@ struct KilnWallRepresentable: UIViewRepresentable {
             guard let brick = bricks[safe: indexPath.item] else { return }
             onSelect(brick.person.id)
         }
+
+        func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+            apply(brickAt: indexPath, on: collectionView, pressed: true)
+        }
+
+        func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+            apply(brickAt: indexPath, on: collectionView, pressed: false)
+        }
+
+        private func apply(brickAt indexPath: IndexPath, on collectionView: UICollectionView, pressed: Bool) {
+            guard let brick = bricks[safe: indexPath.item] else { return }
+            (collectionView.cellForItem(at: indexPath) as? BrickCell)?.apply(brick, pressed: pressed)
+        }
     }
 }
 

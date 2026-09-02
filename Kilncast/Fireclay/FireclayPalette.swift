@@ -30,13 +30,14 @@ enum FireclayPalette {
         unit * CGFloat(steps)
     }
 
-    /// Brick fill tracks forecast T. Pair with a glyph so colour is never the only cue.
+    /// Brick fill tracks forecast T. Floor stays above soot so cold bricks still read.
     static func brickFill(forecastT: Double) -> Color {
         let t = min(1, max(0, forecastT / 100))
+        let lift = 0.28 + (0.72 * t)
         return Color(
-            red: lerp(20, 226, t) / 255,
-            green: lerp(14, 74, t) / 255,
-            blue: lerp(12, 27, t) / 255
+            red: lerp(43, 226, lift) / 255,
+            green: lerp(26, 74, lift) / 255,
+            blue: lerp(20, 27, lift) / 255
         )
     }
 

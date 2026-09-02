@@ -13,12 +13,12 @@ struct FreezeForecastView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: FireclayPalette.space(2)) {
                     EmberArt(name: EmberArtName.twist)
-                        .frame(maxHeight: 180)
+                        .frame(maxHeight: 120)
                         .frame(maxWidth: .infinity)
                     Text("Imminent freeze")
                         .kilnText(.display)
                         .foregroundStyle(FireclayPalette.ink)
-                    Text("Ranked by heat seven days from now. A warm name that will go cold this week sits above a stable ember.")
+                    Text("Ranked by heat seven days from now. Restoke the name that will go cold this week.")
                         .kilnText(.body)
                         .foregroundStyle(FireclayPalette.muted)
                     if let fault = session.fault {
@@ -32,10 +32,23 @@ struct FreezeForecastView: View {
                         .foregroundStyle(FireclayPalette.accent)
                         .kilnTap()
                     } else if session.graph.bricks.isEmpty {
-                        KilnEmptyPlate(action: { session.openAddPerson() })
+                        KilnEmptyPlate(action: { session.openAddPerson() }, fillsPage: false)
+                    } else if session.graph.falling.isEmpty {
+                        VStack(alignment: .leading, spacing: FireclayPalette.space(1)) {
+                            Text("Nothing is falling.")
+                                .kilnText(.headline)
+                                .foregroundStyle(FireclayPalette.ink)
+                            Text("Catch the brick before it hits the floor.")
+                                .kilnText(.body)
+                                .foregroundStyle(FireclayPalette.muted)
+                        }
+                        AshRailView(bricks: session.graph.ash, onSelect: session.openRestoke)
                     } else {
-                        FallingBandView(bricks: session.graph.falling)
-                        KilnWallHost(bricks: session.graph.kilnWall, onSelect: session.openRestoke)
+                        FallingBandView(
+                            bricks: session.graph.falling,
+                            onRestoke: session.openRestoke,
+                            fillsPage: false
+                        )
                         AshRailView(bricks: session.graph.ash, onSelect: session.openRestoke)
                     }
                 }
@@ -47,19 +60,12 @@ struct FreezeForecastView: View {
             .navigationTitle("Forecast")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .cancellationAction) {
-                    Button {
-                        session.sheet = nil
-                    } label: {
-                        Text("Close")
-                            .kilnText(.headline)
-                            .foregroundStyle(FireclayPalette.ink)
-                            .padding(.horizontal, FireclayPalette.space(1))
-                            .kilnTap()
+                    ToolbarItem(placement: .topBarLeading) {
+                        Button("Close") {
+                            session.sheet = nil
+                        }
+                        .tint(FireclayPalette.ink)
                     }
-                    .buttonStyle(.plain)
-                    .accessibilityLabel("Close")
-                }
             }
         }
         .presentationDetents([.large])

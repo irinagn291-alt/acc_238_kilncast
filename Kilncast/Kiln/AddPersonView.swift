@@ -71,19 +71,12 @@ struct AddPersonView: View {
             .navigationTitle("Add a person")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .cancellationAction) {
-                    Button {
-                        session.sheet = nil
-                    } label: {
-                        Text("Close")
-                            .kilnText(.headline)
-                            .foregroundStyle(FireclayPalette.ink)
-                            .padding(.horizontal, FireclayPalette.space(1))
-                            .kilnTap()
+                    ToolbarItem(placement: .topBarLeading) {
+                        Button("Close") {
+                            session.sheet = nil
+                        }
+                        .tint(FireclayPalette.ink)
                     }
-                    .buttonStyle(.plain)
-                    .accessibilityLabel("Close")
-                }
             }
         }
         .presentationDetents([.large])
